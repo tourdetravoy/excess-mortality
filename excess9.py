@@ -4,7 +4,6 @@ import textwrap
 import pandas as pd
 import altair as alt
 
-from vega_datasets import data
 from urllib.error import URLError
 
 st.set_page_config(layout="wide", page_title="Excess Mortality", page_icon="📊", initial_sidebar_state="collapsed")
