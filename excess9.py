@@ -4,8 +4,6 @@ import textwrap
 import pandas as pd
 import altair as alt
 
-from urllib.error import URLError
-
 st.set_page_config(layout="wide", page_title="Excess Mortality", page_icon="📊", initial_sidebar_state="collapsed")
 st.markdown("# Excess Mortality 2020 - 2023")
 st.write(
