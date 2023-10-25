@@ -35,7 +35,7 @@ def data_frame():
             bar_chart_23 = alt.Chart(df23).mark_bar().encode(
             x="week:O",
             y=alt.Y("excess_deaths:Q"),
-            tooltip=['week', 'end_date', 'total_deaths', 'expected_deaths', 'excess_deaths'],).properties(
+            tooltip=['week', 'end_date', 'total_deaths', 'expected_deaths', 'excess_deaths', 'excess_deaths_pct_change*100'],).properties(
                 width=1200,
                 height=600
             ).interactive()
