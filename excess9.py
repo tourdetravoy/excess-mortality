@@ -11,7 +11,7 @@ st.write(
 )
 
 def data_frame():
-    @st.cache
+    @st.cache_data
    
     def get_excess_weekly_data():
         df = pd.read_csv("https://github.com/TheEconomist/covid-19-excess-deaths-tracker/raw/master/output-data/excess-deaths/all_weekly_excess_deaths.csv")
