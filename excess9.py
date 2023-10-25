@@ -87,13 +87,4 @@ def data_frame():
 
             st.altair_chart(bar_chart_20)
 
-    except URLError as e:
-        st.error(
-            """
-            **This demo requires internet access.**
-            Connection error: %s
-        """
-            % e.reason
-        )
-
 data_frame()
