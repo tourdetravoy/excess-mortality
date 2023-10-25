@@ -11,7 +11,8 @@ st.write(
 )
 
 def data_frame():
-    @st.cache_data
+    @st.experimental_memo
+   
     def get_excess_weekly_data():
         df = pd.read_csv("https://github.com/TheEconomist/covid-19-excess-deaths-tracker/raw/master/output-data/excess-deaths/all_weekly_excess_deaths.csv")
         return df.set_index("country")
@@ -86,5 +87,14 @@ def data_frame():
             ).interactive()
 
             st.altair_chart(bar_chart_20)
+
+    except URLError as e:
+       st.error(
+           """
+           **This demo requires internet access.**
+           Connection error: %s
+       """
+           % e.reason
+       )
 
 data_frame()
